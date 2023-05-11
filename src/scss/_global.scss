@@ -1,0 +1,61 @@
+    // Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding+px;
+
+    @media (max-width: $breakpoint1250) {
+        max-width: 1160px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        max-width: 910px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 750px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+    // Body
+body {
+    font-family: 'Teko', sans-serif;
+    &.locked {
+        overflow: hidden;
+    }
+}
+
+    // Animations
+    // Fade
+@keyframes zooming {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.02)
+    }
+    50% {
+        transform: scale(1.04);
+    }
+    75% {
+        transform: scale(1.06);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
